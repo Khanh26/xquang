@@ -1,6 +1,11 @@
 <?php
-require_once '../config/Config.php';
-require_once '../router/web.php';
+if(file_exists('../config/Config.php')) {
+    require_once '../config/Config.php';
+    require_once '../router/web.php';
+} else {
+    require_once './config/Config.php';
+    require_once './router/web.php';
+}
 class Route
 {
     public $Route = [];
