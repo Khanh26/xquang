@@ -27,7 +27,7 @@
              with font-awesome or any other icon font library -->
 
                 <li class="nav-item">
-                    <a href="<?php $site->baseSite(); ?>/admin" class="nav-link">
+                    <a href="<?php $site->baseSite(); ?>/admin" class="nav-link <?php  echo $route->getCurrentRoute() == 'home' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-home"></i>
                         <p>
                             Home
