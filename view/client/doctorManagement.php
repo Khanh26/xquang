@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?php $site->public(); ?>/css/adminlte.min.css">
     <title>Quản trị</title>
 </head>
+
 <body>
     <!-- header -->
     <?php include_once './view/client/layout/header.php' ?>
@@ -47,15 +48,8 @@
                             <div class="card-body">
                                 <div class="row justify-content-between">
                                     <div class="col-sm-6 col-md-6">
-                                        <!-- filter -->
-                                        <!-- end filter -->
                                         <button class="btn btn-default mr-3" id="btnReload" title="Tải lại"><i class="fas fa-redo"></i></button>
-                                        <button class="btn btn-default mr-3" id="btnFilter" title="Bộ lọc"><i class="fas fa-filter"></i> Bộ lộc</button>
-                                        <div class="block-filter">
-                                            
-                                        </div>
                                     </div>
-
                                     <div class="col-sm-6 col-md-4">
                                         <div class="input-group">
                                             <input type="search" class="form-control" id="inputSearch" placeholder="Tìm kiếm">
@@ -95,6 +89,81 @@
             </div>
         </div>
     </div>
+    <!-- modal view -->
+    <div class="modal fade" id="viewDoctor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chi tiết</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-view-doctor">
+                    <div class="container-fluid">
+                        <h5 class="text-center mb-4">Thông tin cá nhân</h5>
+                        <div class="row">
+                            <h6 class="col col-4">Họ tên:</h6>
+                            <p class="col col-6 ml-auto">Đoàn Trọng Khanh</p>
+                        </div>
+                        <div class="row">
+                            <h6 class="col col-4">Ngày sinh:</h6>
+                            <p class="col col-6 ml-auto">12-12-12</p>
+                        </div>
+                        <div class="row">
+                            <h6 class="col col-4">Giới tính:</h6>
+                            <p class="col col-6 ml-auto">Nam</p>
+                        </div>
+                        <div class="row">
+                            <h6 class="col col-4">Địa chỉ:</h6>
+                            <p class="col col-6 ml-auto">Cần Thơ</p>
+                        </div>
+                        <div class="row">
+                            <h6 class="col col-4">Số điện thoại:</h6>
+                            <p class="col col-6 ml-auto">09230921</p>
+                        </div>
+                        <div class="row">
+                            <h6 class="col col-4">Chuyên khoa:</h6>
+                            <p class="col col-6 ml-auto">Khoa tim mạch</p>
+                        </div>
+                        <div class="row">
+                            <h6 class="col col-4">Nơi làm việc:</h6>
+                            <p class="col col-6 ml-auto">Bệnh viện Hà Nội</p>
+                        </div>
+                        <hr>
+                        <h5 class="text-center mb-4">Bằng cấp</h5>
+                        <h6>Chuyên ngành: tim mạch</h6>
+                        <div class="ml-5">
+                            <div class="row">
+                                <h6 class="col col-4">Số hiệu:</h6>
+                                <p class="col col-6 ml-auto">23423422</p>
+                            </div>
+                            <div class="row">
+                                <h6 class="col col-4">Ngày cấp:</h6>
+                                <p class="col col-6 ml-auto">12-12-2000</p>
+                            </div>
+                            <div class="row">
+                                <h6 class="col col-4">Nơi cấp:</h6>
+                                <p class="col col-6 ml-auto">ĐH Y Hà Nội, 20 Đường</p>
+                            </div>
+                            <div class="row">
+                                <h6 class="col col-4">Email nơi cấp:</h6>
+                                <p class="col col-6 ml-auto">khanh@gmailasd</p>
+                            </div>
+                            <div class="row">
+                                <h6 class="col col-4">Số điện thoại nơi cấp:</h6>
+                                <p class="col col-6 ml-auto">khanh@gmailasd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- end content -->
     <!-- footer -->
     <?php include_once './view/client/layout/footer.php' ?>

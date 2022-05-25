@@ -25,6 +25,17 @@ class Model extends dbConnect {
             return false;
         }
     }
+
+    public function findOne($sql, $array = null) {
+        $query = $this->connect()->prepare($sql);
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+        if ($query->execute($array)) {
+            return $query->fetch();
+        } else {
+            return false;
+        }
+    }
+
     public function responseJson($data)
     {
         header('Content-Type: application/json; charset=utf-8');
