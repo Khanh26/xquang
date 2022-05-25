@@ -105,7 +105,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
+                    <a href="<?php $site->baseSite() ?>/?router=quan-ly-mo-hinh" class="nav-link <?php  echo $route->getCurrentRoute() == 'quan-ly-mo-hinh' ? 'active' : ''?>">
                         <i class="fas fa-sitemap nav-icon"></i>
                         <p>
                             Quản lý mô hình

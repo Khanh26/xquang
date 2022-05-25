@@ -1,6 +1,6 @@
 <?php 
 class Config {
-    public $baseSite = 'http://localhost/xquang';
+    public $baseSite = 'http://localhost/predictMedicine';
     public function baseSite() {
         echo  $this->baseSite;
     }

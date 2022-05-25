@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php $site->public(); ?>/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="<?php $site->public(); ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php $site->public(); ?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php $site->public(); ?>/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     <link rel="shortcut icon" href="<?php $site->public(); ?>/img/logo.jpg">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php $site->public(); ?>/css/adminlte.min.css">
@@ -50,7 +47,7 @@
                                         <!-- filter -->
                                         <!-- end filter -->
                                         <button class="btn btn-default mr-3" id="btnReload" title="Tải lại"><i class="fas fa-redo"></i></button>
-                                        <button class="btn btn-default mr-3" id="btnFilter" title="Bộ lọc"><i class="fas fa-filter"></i> Bộ lộc</button>
+                                        <button class="btn btn-default mr-3" id="btnFilter" title="Bộ lọc"><i class="fas fa-filter"></i>Bộ lộc</button>
                                         <div class="block-filter">
                                             
                                         </div>
@@ -71,21 +68,21 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body card-movie">
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
+                                            <th><input type="checkbox" id="checkAll"></th>
                                             <th>Họ tên</th>
                                             <th>Ngày sinh</th>
                                             <th>Chuyên khoa</th>
                                             <th>Nơi làm việc</th>
-                                            <th>Trạng thái</th>
                                             <th></th>
                                             <!-- note create colum -->
                                         </tr>
                                     </thead>
-                                    <tbody id="data-doctor">
-                                        <!-- content -->
+                                    <tbody id="data-movie">
+
                                     </tbody>
                                 </table>
                             </div>
@@ -117,6 +114,7 @@
     <script src="<?php $site->public(); ?>/plugins/sweetalert2/sweetalert2.min.js"></script>
     <!-- DataTables  & Plugins -->
     <script src="<?php $site->public(); ?>/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php $site->public(); ?>/plugins/datatables/jquery.dataTables.js"></script>
     <script src="<?php $site->public(); ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="<?php $site->public(); ?>/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="<?php $site->public(); ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
@@ -125,8 +123,6 @@
     <script src="<?php $site->public(); ?>/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="<?php $site->public(); ?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="<?php $site->public(); ?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <script src="<?php $site->public(); ?>/js/configJS.js"></script>
-    <script src="<?php $site->public(); ?>/js/doctorManagement.js"></script>
     <!-- end script -->
 </body>
 
