@@ -1,11 +1,7 @@
 <?php
-if(file_exists('../config/Config.php')) {
-    require_once '../config/Config.php';
-    require_once '../router/web.php';
-} else {
-    require_once './config/Config.php';
-    require_once './router/web.php';
-}
+
+require_once './config/Config.php';
+require_once './router/web.php';
 class Route
 {
     public $Route = [];
@@ -51,7 +47,7 @@ class Route
         }
     }
 
-    public function viewClient($nameRoute)
+    public function view($nameRoute)
     {
         if ($this->isExistRoute($nameRoute) && file_exists('./view/client/' . $this->getFileViewByName($nameRoute))) {
             $site = new Config();
@@ -60,18 +56,6 @@ class Route
         } else {
 
             include_once './view/error/page404.php';
-        }
-    }
-
-    public function viewAdmin($nameRoute)
-    {
-        if ($this->isExistRoute($nameRoute) && file_exists('../view/admin/' . $this->getFileViewByName($nameRoute))) {
-            $site = new Config();
-            $route = new Route();
-            include_once '../view/admin/' . $this->getFileViewByName($nameRoute);
-        } else {
-
-            include_once '../view/error/page404.php';
         }
     }
 }

@@ -6,7 +6,7 @@ require_once './config/Config.php';
 require_once './router/web.php';
 $site = new Config();
 if (isset($_GET['router'])) {
-    $route->viewClient($_GET['router']);
+    $route->view($_GET['router']);
 } else {
     include('./view/client/home.php');
 }
